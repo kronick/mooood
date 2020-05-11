@@ -1,0 +1,47 @@
+{
+  "name": "mooood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc -p .",
+    "start:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'tsc -p .'",
+    "test": "yarn jest --verbose --coverage",
+    "test:live": "yarn jest --watchAll"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.5",
+    "express": "^4.17.1",
+    "jest": "26.0.1",
+    "nodemon": "1.18.10",
+    "ts-jest": "25.5.1",
+    "ts-node": "8.10.1",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kronick/mooood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kronick/mooood/issues"
+  },
+  "homepage": "https://github.com/kronick/mooood#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
