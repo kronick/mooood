@@ -5,3 +5,8 @@ const app = express();
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+
+app.post("/incoming", (req, res) => {
+  console.log("Incoming!", req.body);
+  res.send("OK");
+});
