@@ -6,7 +6,6 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc -p .",
-    "postinstall": "npm run build",
     "start:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'tsc -p .'",
     "test": "yarn jest --verbose --coverage",
